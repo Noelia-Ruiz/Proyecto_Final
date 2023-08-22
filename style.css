@@ -1,0 +1,222 @@
+/*ESTILOS GENERALES PARA TODO EL DOCUMENTO AL QUE ESTÁ LINKEADO*/
+body {
+    margin: 0;
+    /*suele usarse a rangos muy generales para usar todo el espacio en pantalla*/
+}
+
+/*ESTILOS PARA EL HEADER,
+SIEMPRE SE RECOMIENDA EMPEZAR DESDE EL ESTILO MÁS GENÉRICO AL MAS ESPECÍFICO
+*/
+header {
+    /*seleccionamos por etiqueta directamente*/
+    display: flex;
+    /* Utilizamos flexbox para alinear los elementos en línea */
+    justify-content: space-between;
+    /* Distribución equitativa del espacio entre los elementos */
+    align-items: center;
+    /* Centramos verticalmente los elementos */
+    padding: 7px;
+    /* Añadimos un poco de espacio alrededor del header */
+    background-color: black;
+    /* Color de fondo del header, en este caso lo dejamos oscuro */
+}
+
+/*AHORA, COLOCAMOS LOS ESTILOS A LA ETIQUETA NAV,
+RECORDEMOS QUE ES UNA ETIQUETA QUE ESTÁ ADENTRO DEL ENCABEZADO (O HEADER)
+*/
+/* Estilos para los elementos nav */
+.nav1{
+    display: inline-block; /*con este tipo de display indicamos que se ubica en linea respecto al bloque*/
+    background-color: black;
+}
+
+.nav1 p{
+    animation: blink 1s infinite; /*animaciones en css puro: llamamos la animación desde keyframe*/
+}
+
+.nav2{
+    display: inline-block; /*mantenemos el alineamiento para los dos nav*/
+}
+
+.turno, .nav1 { /*cuando aplicamos los mismos estilos a dos clases, las separamos por una coma (,)*/
+    display: flex; /* Utilizamos flexbox para alinear los elementos internos */
+    align-items: center; /* Centramos verticalmente los elementos */
+}
+
+.nav1 img {
+    margin-left: 20px; /*despega del margen izquierdo en 20px*/
+    width: 10%;
+    animation: blink 1s infinite; /*la animación no tiene tiempo delimitado, será infinito*/
+    transform: rotate(110deg); /* Rotamos la imagen 90 grados en sentido horario */
+    margin-right: 10px; /* Añadimos un poco de espacio entre la imagen y el texto */
+}
+
+
+.nav1 a{
+    text-decoration: none; /*Con 'none', indicamos que queremos el texto simple, puro. Sin decoraciones adicionales*/
+    font-weight: bold; /*el grosor de nuestra letra (peso) será estilo de 'negrita'*/
+    margin-left: 25px;
+    color: white;
+}
+
+.nav1 a:hover{ /*HOVER: nos permite ver efectos al apoyar el ratón sobre el elemento*/
+    padding: 10px;
+    text-decoration: none;
+    background-color: violet;
+}
+
+/*ANIMACIÓN EN CSS
+usamos la animación a la que llamamos 'blink' que hace que un elemento parpadee
+en este caso, la aplicamos tanto a la flecha como al párrafo de sacar turno.
+
+¿Qué es 'keyframe'?
+Es una regla en CSS que se utiliza para definir animaciones o fotogramas.
+
+los porcentajes 0%, 100%: representan el progreso de la animación
+donde empieza (0) y donde termina (100)
+
+¿Y la opacidad?
+opacity controla la transparencia del elemento:
+    0 significa completamente transparente,
+    1 significa completamente opaco.*/
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0; /* Imagen invisible al principio y al final de la animación */
+    }
+    50% {
+        opacity: 1; /* Imagen visible en la mitad de la animación */
+    }
+}
+
+.nav2 ul {
+    list-style: none; /* Quitamos los puntos de la lista desordenada */
+    margin: 0; /* Quitamos el margen por defecto */
+    padding: 0; /* Quitamos el padding por defecto */
+    display: flex; /* Utilizamos flexbox para alinear los elementos en línea */
+}
+
+.nav2 li {
+    margin-right: 20px; /* Añadimos espacio entre los elementos de la lista */
+}
+
+/* Estilos para los enlaces */
+.nav2 a {
+    text-decoration: none; /* Quitamos la decoración de los enlaces */
+    color: #333; /* Color del texto del enlace */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.nav2 a:hover{
+    background-color: #fff;
+    padding: 20px;
+    font-weight: bolder; /* bolder, que hace que el texto sea más grueso en comparación con su peso por defecto.*/
+    border-radius: 25%; /*Esta propiedad se utiliza para agregar bordes redondeados a un elemento HTML*/
+}
+
+.nav2{
+    background-color: violet;
+    padding: 50px;
+}
+
+.titulo{
+    background-color: #fff;
+    color: black;
+    text-align: center; /*alineamos el texto*/
+    font-weight: bold; /*damos peso de negrita a la letra*/
+    font-size: 1.5rem; /*utilizamos rem
+    ¿qué es 'rem'?
+    "rem" es una unidad de medida utilizada en CSS para especificar tamaños relativos
+    basados en el tamaño de fuente de la raíz (normalmente el tamaño de fuente del elemento <html>*/
+    padding: 10px;
+}
+
+.descripcion {
+    display: inline-block;
+    width: 50%;
+}
+
+.descripcion img {
+    margin-left: 10%;
+    max-width: 100%;
+}
+
+.descripcion figcaption {
+    max-width: 90%;
+    text-align: center;
+    font-weight: bold;
+    padding: 2%;
+}
+
+.aside{
+    display: inline-block;
+    box-sizing: border-box;
+    /*por defecto, css si no lo especificamos, le coloca el valor de 'content-box' a esta propiedad
+    NOSOTROS LO ESPECIFICAMOS COMO BORDER BOX. ¿Y esto qué es?
+    En el modelo de caja border-box, el tamaño de un elemento se calcula considerando:
+        el contenido interno,
+        el relleno y el borde.
+    Esto significa que el tamaño total del elemento se mantiene dentro de las dimensiones especificadas, incluso si se agregan bordes y relleno.*/
+    width: 40%;
+}
+
+.aside h1{
+    margin-left: 25%;
+}
+
+.aside li{
+    font-weight: 600;
+}
+
+.presentacion{
+    width: 100%;
+}
+
+.presentacion img{
+    margin-top: 3%;
+    margin-left: 40%;
+    width: 20%;
+}
+
+.presentacion figcaption{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    padding: 2%;
+    background-color: rgb(154, 63, 240);
+    /*COLORES RGB EN CSS:display:
+    Los colores RGB son una forma de representar colores en la pantalla o en medios digitales
+    utilizando la combinación de tres componentes: rojo (Red), verde (Green) y azul (Blue).*/
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline; /*VALOR UNDERLINE: nos permite mostrar el texto SUBRAYADO*/
+    font-weight: bold;
+    padding-top: 1.5%; /*espacio interno solo en la parte superior*/
+}
+
+.formulario {
+    background-image: url('assets/granas.gif'); /*proximamente añadiré backgroun, una imagen al formulario*/
+    max-width: 500px; /*es el ancho máximo en que puede extenderse esta imagen*/
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.formulario input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px; /*solo aplica a la parte inferior del elemento*/
+}
+
+.formulario input[type="submit"] { /*tipo submit: hace referencia al envío de información*/
+    background-color: #9e0399;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center; /*alineamos al centro*/
+    font-weight: bold; /*letra en negrita*/
+}
