@@ -1,0 +1,159 @@
+<!DOCTYPE html> <!--refiere a un tipo de documento html-->
+<html lang="es"> <!--utilizamos lenguaje español-->
+
+<head> <!--es información para el navegador-->
+    <meta charset="UTF-8"> <!--incorpora carácteres especiales, como la letra 'ñ'-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--nos permite controlar la forma en que se verá el contenido de la página en el navegador.-->
+    <link rel="stylesheet" href="style.css"> <!--referenciamos a nuestra hoja de estilos-->
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon"> <!--agregamos un ícono a nuestra página-->
+    <!--linkeamos a bootstrap via cdn, obtenemos el link de la página-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Proyecto</title> <!--título d nuestro proyecto, se ve al cargar la web-->
+</head>
+
+<body> <!--es la parte con la que interactúa directamente el usuario-->
+    <header> <!--encabezado de nuestra página-->
+        <!-- Primer nav de turno con imagen y texto -->
+        <nav class="nav1"> <!--incorporamos una etiqueta para nuestro menú-->
+            <img src="assets/click.png" alt="flecha hacer click"> <!--anexamos el logo-->
+            <!--ATRIBUTO ALT: la imagen en caso de no poder ser visualizada, recibe texto alusivo-->
+            <p class="click"> <!--este párrafo nos muestra donde hacer click para obtener un turno-->
+                <a href="#">SACÁ TURNO HACIENDO CLICK AQUÍ</a>
+            </p> <!--párrafo comun-->
+        </nav>
+
+        <!-- Segunda etiqueta nav con las redes sociales -->
+        <nav class="nav2"> <!--colocamos la clase 'nav2' para diferenciarlo de la primera-->
+            <ul> <!--etiqueta de lista desordenada-->
+                <!--li, refiere a cada uno de esos items de la lista-->
+                <!--ETIQUETA A, sirve para colocar enlaces y rutas a nuestro proyecto-->
+                <!--Podemos usar tanto link a páginas externas, como links a rutas locales-->
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">FACEBOOK</a> <!---lo redirigimos a la página principal de facebook-->
+                </li> <!--dentro del href, hacemos el ruteo-->
+                <li>
+                    <a href="https://www.instragram.com">INSTAGRAM</a> <!--redirigimos a la página principal de instagram-->
+                </li>
+                <!--colocamos en mayúsculas lo que verá el usuario y al dar click, lo redirigirá-->
+                <li>
+                    <a href="https://www.twitter.com">TWITTER</a> <!--lo llevamos a la página principal de twitter-->
+                </li>
+                <li><a href="#form">CONTACTO</a></li> <!--lo lleva a la sección del formulario-->
+            </ul> <!--cerramos la etiqueta de lista desordenada que contiene a todos los items-->
+        </nav> <!--cerramos la etiqueta nav-->
+    </header> <!--se cierra también el header para dar paso a otra sección-->
+
+    <div class="titulo"> <!--este div solo contiene un h1: etiqueta para el título principal de nuestra página-->
+        ¿TENÉS SEIS MESES PARA CAMBIAR TU VIDA?
+    </div> <!--lo cerramos-->
+
+    <section class="descripcion"> <!--en esta sección colocamos el logo y su texto alusivo debajo-->
+        <img src="assets/5-logo-negro.png" alt="logo principal"> <!--indicamos la ruta de la imagen que vamos a mostrar-->
+        <figcaption>Soy Andrea Morales. Profesional con 16 años en el rubro y apasionada por la terapia
+            cognitiva-conductual.
+            Creo profundamente en enseñar a las personas el manejo de sus emociones llevando las cosas a otra
+            perspectiva haciéndoles entender sus patrones de pensamiento y comportamiento para que puedan vivir
+            plenamente.
+        </figcaption>
+        <!--FIGCAPTION: NOS PERMITE INCRUSTAR TEXTO ACOMPAÑANDO IMAGEN, EQUIVALE AL EPÍGRAFE DE LAS FOTOS-->
+    </section>
+
+    <!--SECCIÓN 'ASIDE' O SECCIÓN SECUNDARIA, la utilizamos para mostrar los distintos tipos de tratamientos que se ofrecen.
+    Serían las diferentes terapias que se brindan-->
+    <aside class="aside">
+        <h1>¿En qué puedo ayudarte?</h1> <!--en este caso usamos el h1 para resaltar el texto-->
+        <ul> <!--es una etiqueta desordenada: aparecen los elementos en forma de item-->
+            <li>Estrés</li>
+            <li>Fobias</li>
+            <li>Ataques de Pánico</li>
+            <li>Ansiedad</li>
+            <li>Depresión</li>
+            <li>trastorno obsesivo-compulsivo</li>
+        </ul>
+    </aside> <!--cerramos la sección de aside con todos los li-->
+
+    <!--USAMOS UN DIV: QUE ES BASICAMENTE UN CONTENDEOR, para insertar la imagen de la psicóloga-->
+    <div class="presentacion"> <!--usamos esta clase para después darle estilos en css-->
+        <img src="assets/perfilPhoto.jpg" alt="imagen testimonio 1"> <!--vinculamos a la imagen de perfil-->
+        <figcaption>Porque una vida libre de emociones que nos llevan a la autodestrucción, es posible. Con los
+            tratamientos personalizados, podrás en menos de un año ver un antes y un después. Siempre que me preguntan
+            sobre mi filosofía de vida, respondo que la vida es solo una como para atarla a sentimientos banales.
+        </figcaption> <!--en este caso, englobamos una frase suya para la presentación de su página
+        El texto que acompaña el figcaption aparecerá debajo de la imagen de la psicóloga-->
+    </div>
+
+    <!--SECCIÓN TESTIMONIOS, ACÁ TENDREMOS TRES PERSONAS QUE PASARON POR SUS DIFERENTES TRATAMIENTOS Y CUENTAN SU EXPERIENCIA-->
+    <h2>TESTIMONIOS</h2>
+    <!--SE INCORPORAN TRES CARDS DE BOOTSTRAP 5-->
+    <div class="card-group">
+        <div class="card">
+            <img src="assets/img1.png" class="card-img-top" alt="imagen testimonio 1">
+            <div class="card-body">
+                <h5 class="card-title">ROMINA DOMINGUEZ</h5> <!--usamos esta parte para colocar el nombre de la primer persona-->
+                <p class="card-text">“ Antes vivía presa de mis emociones. 
+                    No me daba cuenta que mis actitudes <!--este texto sirve para contener el relato-->
+                    lastimaban a mi familia. Decidí buscar ayuda porque entendí que nadie tenía porqué soportar todo
+                    eso. ”
+                </p> <!--cerramos el párrafo-->
+                <p class="card-text"><small class="text-muted">hace 3 meses</small></p> <!--anexamos la línea de tiempo del testimonio-->
+            </div>
+        </div>
+        <!--testimonios 2 y 3, hacemos lo mismo que en el primero pero con otros nombres, imagenes, relato y línea de tiempo-->
+        <div class="card">
+            <img src="assets/img2.png" class="card-img-top" alt="imagen testimonio 2">
+            <div class="card-body">
+                <h5 class="card-title">TATIANA BENAVIDEZ</h5>
+                <p class="card-text">“ Mis padres se divorciaron y mi vida se caía a pedazos, no quería levantarme de la
+                    cama. Fue el límite para empezar el tratamiento. Estoy muy agradecida, mi vida es otra. Siento que
+                    volví a ser yo”
+                </p>
+                <p class="card-text"><small class="text-muted">hace 2 meses</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img3.png" class="card-img-top" alt="imagen testimonio 3">
+            <div class="card-body">
+                <h5 class="card-title">CAROLINA DI MARCONI</h5>
+                <p class="card-text">“ Tenía el famoso TOC y no lo sabía. Mi corazón se aceleraba si no hacía tal o cual
+                    cosa de 'x' forma. Sin darme cuenta me estaba enfermando,
+                    ya no era yo cuando llegué.“</p>
+                <p class="card-text"><small class="text-muted">hace 4 meses</small></p>
+            </div> <!--cerramos todos y cada uno-->
+        </div> <!--de los divs que fueron abiertos-->
+    </div> <!--en el orden en el que fueron abiertos-->
+
+    <br>
+
+    <!--FORMULARIO DE CONTACTO:: En este caso se lo vincula en la misma página-->
+    <div id="form" class="formulario"> <!--usamos un div con la clase para darle estilos en css-->
+        <h2> <!--etiqueta de encabezado de segundo nivel-->
+            <center><u>¿Querés suscribirte o dejar comentarios?</u></center> <!--center sirve  para centrar el contenido en el medio de la página-->
+        </h2>
+        <h3> <!--encabezado de tercer nivel-->
+            <center>Completá nuestro Formulario de Registro</center> <!--si bien esta etiqueta está en desuso (dicen), sigue siendo útil-->
+        </h3>
+
+        <!--ACTION Y MÉTODO EN LOS FORMULARIOS:
+        El atributo action del formulario especifica la URL a la que se enviarán los datos del formulario cuando se envíe.
+        El atributo method se establece en "get" para indicar que se utilizará el método GET para enviar los datos.-->
+        <form action="enviar" method="get"> <!--ETIQUETA FORM: Nos permite generar un formulario-->
+            <center> <!--centramos el contenido del form-->
+                <label for="usuario">Usuario:</label> <!--label es una etiqueta de pertenencia del campo, en este caso para guardar usuario-->
+                <input type="text" placeholder="Ingresá tu nombre de usuario" required> <!--REQUIRED: Indica que el campo es obligatorio-->
+                <!--PLACEHOLDER: es lo que vemos y desaparece cuando empezamos a escribir-->
+                <label for="contrasena">Contraseña:</label> <!--este campo muestra lo que ingresamos como puntos-->
+                <input type="password" placeholder="Ingresá tu contraseña" required>
+
+            <center><label for="mensaje">Dejame tu mensaje:</label></center> <!--textarea permite ingresartexto-->
+                <textarea id="mensaje" placeholder="Comentarios, consultas, dudas o sugerencias" rows="5" required></textarea>
+        
+                <input type="submit" value="Enviar"> <!--tenemos un botón para enviar la información-->
+            </center>
+        </form>
+    </div>
+    <!--ETIQUETA FOOTER: la usamos para poner el copyright, que es el ícono acompañando el año de creación de la página-->
+    <footer>Todos los derechos reservados © 2023</footer>
+</body> <!--terminamos de colocar el contenido al body de nuestra página web-->
+
+</html> <!--cerramos el documento html-->
