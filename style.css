@@ -197,7 +197,7 @@ h2{
 }
 
 .formulario {
-    background-image: url('assets/granas.gif'); /*proximamente añadiré backgroun, una imagen al formulario*/
+    background-image: url('assets/granas_colores.gif'); /*la imagen toma el contenedor de form solamente*/
     max-width: 500px; /*es el ancho máximo en que puede extenderse esta imagen*/
     margin: 0 auto;
     padding: 20px;
@@ -210,13 +210,18 @@ h2{
 }
 
 .formulario input[type="submit"] { /*tipo submit: hace referencia al envío de información*/
-    background-color: #9e0399;
+    background-color: #790375;
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
+.formulario label{
+    font-weight: bold;
+}
+
 footer{
+    background-color: violet;
     text-align: center; /*alineamos al centro*/
     font-weight: bold; /*letra en negrita*/
 }
