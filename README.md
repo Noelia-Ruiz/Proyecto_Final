@@ -32,11 +32,9 @@
 
   - la creatividad
 
-  - el misterio
-
   - la sensibilidad a la belleza o los grandes ideales
 
-  - la fantasía
+  - promueve la armonía de la mente y las emociones, 
 
   - y la introspección.
 
