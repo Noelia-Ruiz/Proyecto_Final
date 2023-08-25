@@ -1,6 +1,7 @@
 /*ESTILOS GENERALES PARA TODO EL DOCUMENTO AL QUE ESTÁ LINKEADO*/
 body {
     margin: 0;
+    width: 100%;
     /*suele usarse a rangos muy generales para usar todo el espacio en pantalla*/
 }
 
@@ -8,10 +9,10 @@ body {
 SIEMPRE SE RECOMIENDA EMPEZAR DESDE EL ESTILO MÁS GENÉRICO AL MAS ESPECÍFICO
 */
 header {
-    /*seleccionamos por etiqueta directamente*/
-    display: flex;
+    height: 15%;
+    display: flex;/*seleccionamos por etiqueta directamente*/
     /* Utilizamos flexbox para alinear los elementos en línea */
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* Distribución equitativa del espacio entre los elementos */
     align-items: center;
     /* Centramos verticalmente los elementos */
@@ -28,14 +29,21 @@ RECORDEMOS QUE ES UNA ETIQUETA QUE ESTÁ ADENTRO DEL ENCABEZADO (O HEADER)
 .nav1{
     display: inline-block; /*con este tipo de display indicamos que se ubica en linea respecto al bloque*/
     background-color: black;
+    max-width: 50%; /*solo puede extenderse hasta el 50% del ancho-pantalla*/
 }
 
 .nav1 p{
     animation: blink 1s infinite; /*animaciones en css puro: llamamos la animación desde keyframe*/
 }
 
+.click{
+    margin-top: 3%;
+}
+
 .nav2{
+    max-width: 50%; /*solo puede extenderse hasta el 50% del ancho-pantalla*/
     display: inline-block; /*mantenemos el alineamiento para los dos nav*/
+    background-color: #ad6feb;
 }
 
 .turno, .nav1 { /*cuando aplicamos los mismos estilos a dos clases, las separamos por una coma (,)*/
@@ -62,7 +70,8 @@ RECORDEMOS QUE ES UNA ETIQUETA QUE ESTÁ ADENTRO DEL ENCABEZADO (O HEADER)
 .nav1 a:hover{ /*HOVER: nos permite ver efectos al apoyar el ratón sobre el elemento*/
     padding: 10px;
     text-decoration: none;
-    background-color: violet;
+    background-color: #ad6feb;
+    color: #fff;
 }
 
 /*ANIMACIÓN EN CSS
@@ -91,8 +100,7 @@ opacity controla la transparencia del elemento:
 
 .nav2 ul {
     list-style: none; /* Quitamos los puntos de la lista desordenada */
-    margin: 0; /* Quitamos el margen por defecto */
-    padding: 0; /* Quitamos el padding por defecto */
+    margin-top: 4%;
     display: flex; /* Utilizamos flexbox para alinear los elementos en línea */
 }
 
@@ -114,12 +122,9 @@ opacity controla la transparencia del elemento:
     border-radius: 25%; /*Esta propiedad se utiliza para agregar bordes redondeados a un elemento HTML*/
 }
 
-.nav2{
-    background-color: violet;
-    padding: 50px;
-}
 
 .titulo{
+    margin-top: 1%;
     background-color: #fff;
     color: black;
     text-align: center; /*alineamos el texto*/
@@ -137,8 +142,9 @@ opacity controla la transparencia del elemento:
 }
 
 .descripcion img {
-    margin-left: 10%;
-    max-width: 100%;
+    margin-top: 5%;
+    margin-left: 25%;
+    max-width: 50%;
 }
 
 .descripcion figcaption {
@@ -158,6 +164,7 @@ opacity controla la transparencia del elemento:
         el relleno y el borde.
     Esto significa que el tamaño total del elemento se mantiene dentro de las dimensiones especificadas, incluso si se agregan bordes y relleno.*/
     width: 40%;
+    margin-top: 0;
 }
 
 .aside h1{
