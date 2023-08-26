@@ -78,7 +78,7 @@
         <img src="assets/perfilPhoto.jpg" alt="imagen testimonio 1"> <!--vinculamos a la imagen de perfil-->
         <figcaption>Porque una vida libre de emociones que nos llevan a la autodestrucción, es posible. Con los
             tratamientos personalizados, podrás en menos de un año ver un antes y un después. Siempre que me preguntan
-            sobre mi filosofía de vida, respondo que la vida es solo una como para atarla a sentimientos banales.
+            sobre mi filosofía de vida, respondo que la vida es solo una como para atarla a emociones destructivas.
         </figcaption> <!--en este caso, englobamos una frase suya para la presentación de su página
         El texto que acompaña el figcaption aparecerá debajo de la imagen de la psicóloga-->
     </div>
@@ -147,13 +147,17 @@
 
             <center><label for="mensaje">DEJAME TU MENSAJE:</label></center> <!--textarea permite ingresartexto-->
                 <textarea id="mensaje" placeholder="Comentarios, consultas, dudas o sugerencias" rows="5" required></textarea>
-        
-                <input type="submit" value="ENVIAR"> <!--tenemos un botón para enviar la información-->
+                <button type="submit" id="enviar">Enviar</button> <!--tenemos un botón para enviar la información-->
             </center>
         </form>
     </div>
     <!--ETIQUETA FOOTER: la usamos para poner el copyright, que es el ícono acompañando el año de creación de la página-->
     <footer>Todos los derechos reservados © 2023</footer>
+
+    <!--SIEMPRE LINKEAMOS EL ARCHIVO JAVASCRIPT AL FINAL DE NUESTRO BPDY, ESTO LO HACEMOS
+    PARA QUE PRIMERO SE CARGUEN LA ESTRUCTURA Y EL ESTILO Y DESPUÉS LA LÓGIA DE NUESTRA PÁGINA.-->
+
+    <script src="scripts/app.js"></script>
 </body> <!--terminamos de colocar el contenido al body de nuestra página web-->
 
 </html> <!--cerramos el documento html-->
