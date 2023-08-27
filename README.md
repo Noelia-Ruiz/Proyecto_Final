@@ -47,6 +47,17 @@ Pueden hacerse ajustes, sí. Pero en esta oportunidad se presenta con los cambio
 </details>
 
 <details>
+<summary> ESTRUCTURA </summary>
+
+  <br>
+  
+  - **Posee links a páginas de facebook, instagram y twitter en su header**: Redirecciona a cualquiera de ellas cuando el usuario hace click.
+
+  - **Link a ruta interna: Para la sección de contacto**: se ridirige dentro del mismo html para enviar un mensaje desde cuentas de email.
+  
+</details>
+<details>
+  
 <summary> PARTE RESPONSIVA </summary>
 
   ### Menu Hamburguesa
@@ -68,4 +79,4 @@ Pueden hacerse ajustes, sí. Pero en esta oportunidad se presenta con los cambio
 
 </details>
 
-![readme_landing](https://github.com/Noelia-Ruiz/Proyecto_Final/assets/111775575/e52a9485-3bc8-424b-81d7-90f58fd34318)
+![readme_landing](https://github.com/Noelia-Ruiz/Proyecto_Final/assets/111775575/dfa813ff-ab45-497c-9116-64ca46913efa)
