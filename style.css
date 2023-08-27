@@ -234,31 +234,103 @@ footer{
 }
 
 /*ACÁ SE EMPIEZA A REALIZAR EL FAMOSO MENU HAMBURGUESA:
+El icono de las tres líneas horizontales se llama "hamburguesa"
+debido a su similitud visual con una hamburguesa real.
+Al hacer clic en este icono, se revela un menú desplegable
+que normalmente contiene enlaces a diferentes secciones del sitio web
+o a funciones importantes de la aplicación.
 
+En lo que es css, se utiliza el display para controlar la visibilidad
+del menú desplegable, junto con transiciones y animaciones para que 
+el usuario pueda tener una experiencia visual atractiva e intuitiva.
 */
-/* Estilos para el menú hamburguesa en pantallas pequeñas */
-@media screen and (max-width: 320px) {
-    .navbar a:not(:first-child) {
+
+
+/* Estilos para el ícono de hamburguesa */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineación a la izquierda */
+    cursor: pointer;
+    margin-left: 10px; /* Agregamos un margen izquierdo para separar del contenido */
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(231, 194, 202);
+    margin: 3px 0;
+}
+
+
+/* Estilo de hamburguesa en pantallas pequeñas (hasta 500px) */
+@media screen and (max-width: 500px) {
+    .nav1,
+    .nav2 {
         display: none;
     }
-    .navbar a.icon {
-        float: right;
+
+    .menu-active .nav1,
+    .menu-active .nav2 {
         display: block;
+        text-align: center;
+        background-color: #ad6feb;
+        padding: 10px 0;
     }
-    .navbar.responsive {
-        position: relative;
-    }
-    .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: none;
+
+    .menu-active .nav2 {
+        width: 50%;
+        margin-top: 10px;
         display: block;
-        text-align: left;
+        text-align: center;
+    }
+
+    .menu-active .nav2 ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Mostrar elementos uno debajo del otro */
+        align-items: center; /* Centrar elementos horizontalmente */
+    }
+
+    .menu-active .nav2 li {
+        margin: 10px 0;
+    }
+
+    /* Estilos para el ícono de hamburguesa */
+    .hamburguesa {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(231, 194, 202);
+        margin: 3px 0;
     }
 }
+
+
+/* Estilos de hamburguesa en pantallas grandes (más de 500px) */
+@media screen and (min-width: 501px) {
+    .hamburguesa {
+        display: none;
+    }
+
+    .menu-active .nav1,
+    .menu-active .nav2 {
+        display: block;
+    }
+
+    .menu-active .nav2 {
+        margin-top: 0;
+    }
+}
+
+
+
+
 
 .success-message {
     position: fixed;

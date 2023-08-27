@@ -26,3 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 3000); // Desaparecerá después de 3 segundos, usamos 3000 porque en informática, las medidas se usan/escriben en milisegundos
     }
 });
+
+//Usamos JavaScript para agregar el comportamiento de abrir y cerrar el menú al hacer clic en el icono de hamburguesa.
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburguesa = document.querySelector(".hamburguesa");
+    const header = document.querySelector("header");
+
+    hamburguesa.addEventListener("click", function() {
+        header.classList.toggle("menu-active");
+    });
+});
