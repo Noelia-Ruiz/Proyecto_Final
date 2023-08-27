@@ -36,3 +36,19 @@ document.addEventListener("DOMContentLoaded", function() {
         header.classList.toggle("menu-active");
     });
 });
+
+//usamos una función para mostrar la cantidad de visitantes que tenemos en nuestra web
+// Obtenemos el elemento de clic por su ID, en este caso le psimos 'contador_click'
+const clickElement = document.getElementById('contador_click');
+
+// Inicializar el contador en 0
+let contador_click = 0; //para poder empezar a contar en cada recarga de la página
+
+// Función que se ejecuta cuando se hace clic en el elemento
+function hacerClick() { //le colocamos un nombre sper intuitivo xD
+    contador_click++; //vamos incrementando el contador en 1 cada vez que llamamos a la función
+    clickElement.textContent = `Sos el visitante número ${contador_click}`; //concatenamos la variable con el contador al string
+}
+
+// Agregar un evento de clic al elemento
+clickElement.addEventListener('click', hacerClick);

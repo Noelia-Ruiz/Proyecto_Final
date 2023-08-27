@@ -37,7 +37,10 @@ RECORDEMOS QUE ES UNA ETIQUETA QUE ESTÁ ADENTRO DEL ENCABEZADO (O HEADER)
 }
 
 .click{
-    margin-top: 3%;
+    margin: 3%;
+    cursor: pointer; /*el cursor toma forma de manito*/
+    color: violet; /*cambiamos el color de la letra del párrafo*/
+
 }
 
 .nav2{
